@@ -57,7 +57,10 @@ export default async function AntLingPlugin(input = {}) {
           type: 'api',
           label: 'API Key（百灵开放平台）',
           placeholder: 'ant-ling-…',
-          async authorize(inputs) {
+        prompts: [
+        { type: 'text', key: 'apiKey', message: '粘贴百灵 API Key（chat.ant-ling.com/platform/api → 密钥管理）', placeholder: 'ant-ling-…', required: true },
+      ],
+        async authorize(inputs) {
             const key =
               typeof inputs === 'string'
                 ? inputs.trim()
