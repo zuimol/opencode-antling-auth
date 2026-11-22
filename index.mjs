@@ -58,7 +58,8 @@ export default async function AntLingPlugin(input = {}) {
           label: 'API Key（百灵开放平台）',
           placeholder: 'ant-ling-…',
         prompts: [
-        { type: 'text', key: 'apiKey', message: '粘贴百灵 API Key（chat.ant-ling.com/platform/api → 密钥管理）', placeholder: 'ant-ling-…', required: true },
+        { type: 'text', key: 'accountName', message: '第一栏＝凭证标识：给它起个名字（如「百灵主号」），不是 Key', required: false },
+        { type: 'text', key: 'apiKey', message: '第二栏＝粘贴百灵 API Key（chat.ant-ling.com/platform/api → 密钥管理）', placeholder: 'ant-ling-…', required: true },
       ],
         async authorize(inputs) {
             const key =
@@ -85,7 +86,7 @@ export default async function AntLingPlugin(input = {}) {
                   type: 'success',
                   key,
                   metadata: {
-                    accountName: '百灵 API Key',
+                    accountName: typeof inputs?.accountName === 'string' && inputs.accountName.trim() ? inputs.accountName.trim() : undefined,
                     models: count,
                     baseUrl,
                   },
