@@ -1,33 +1,42 @@
 {
-    "name":  "opencode-antling-auth",
-    "version":  "0.1.0",
-    "description":  "magpie / OpenCode provider plugin: 蚂蚁百灵 (Ant Ling) OpenAI-compatible API (api.ant-ling.com) with your own API key",
-    "type":  "module",
-    "main":  "./index.mjs",
-    "exports":  {
-                    ".":  "./index.mjs",
-                    "./package.json":  "./package.json"
-                },
-    "files":  [
-                  "index.mjs",
-                  "models.mjs",
-                  "README.md",
-                  "LICENSE"
-              ],
-    "keywords":  [
-                     "magpie",
-                     "magpie-plugin",
-                     "opencode",
-                     "opencode-plugin",
-                     "opencode-antling-auth",
-                     "antling",
-                     "ant-ling",
-                     "ling",
-                     "bailing",
-                     "antgroup"
-                 ],
-    "license":  "MIT",
-    "engines":  {
-                    "node":  "\u003e=20"
-                }
+  "name": "opencode-antling-auth",
+  "version": "0.1.0",
+  "description": "magpie / OpenCode provider plugin: 铓傝殎鐧剧伒 (Ant Ling) OpenAI-compatible API (api.ant-ling.com) with your own API key",
+  "type": "module",
+  "main": "./index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.mjs",
+    "models.mjs",
+    "README.md",
+    "LICENSE",
+    "assets"
+  ],
+  "keywords": [
+    "magpie",
+    "magpie-plugin",
+    "opencode",
+    "opencode-plugin",
+    "opencode-antling-auth",
+    "antling",
+    "ant-ling",
+    "ling",
+    "bailing",
+    "antgroup"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "magpie": {
+    "name": "百灵 Ant Ling",
+    "summary": {
+      "en": "蚂蚁百灵 (Ant Ling) 开放平台 API：OpenAI 兼容端点 api.ant-ling.com/v1，用自己的 API Key。",
+      "zh": "蚂蚁百灵 (Ant Ling) 开放平台 API：OpenAI 兼容端点 api.ant-ling.com/v1，用自己的 API Key。"
+    },
+    "icon": "data:image/png;base64,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"
+  }
 }
