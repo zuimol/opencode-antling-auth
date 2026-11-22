@@ -1,0 +1,33 @@
+{
+    "name":  "opencode-antling-auth",
+    "version":  "0.1.0",
+    "description":  "magpie / OpenCode provider plugin: 蚂蚁百灵 (Ant Ling) OpenAI-compatible API (api.ant-ling.com) with your own API key",
+    "type":  "module",
+    "main":  "./index.mjs",
+    "exports":  {
+                    ".":  "./index.mjs",
+                    "./package.json":  "./package.json"
+                },
+    "files":  [
+                  "index.mjs",
+                  "models.mjs",
+                  "README.md",
+                  "LICENSE"
+              ],
+    "keywords":  [
+                     "magpie",
+                     "magpie-plugin",
+                     "opencode",
+                     "opencode-plugin",
+                     "opencode-antling-auth",
+                     "antling",
+                     "ant-ling",
+                     "ling",
+                     "bailing",
+                     "antgroup"
+                 ],
+    "license":  "MIT",
+    "engines":  {
+                    "node":  "\u003e=20"
+                }
+}
